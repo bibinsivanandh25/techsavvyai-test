@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #303030;
+}
+
+.heatmap {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100px repeat(24, 1fr);
+}
+
+.header {
+  font-weight: bold;
+  background: #f4f4f4;
+}
+
+.cell {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.cell.day {
+  font-weight: bold;
+  background-color: #e8e8e8;
+}
+
+.row .cell {
+  background: #d1f4ff;
+  transition: background 0.3s;
+}
+
+.row .cell:hover {
+  background: #b0d4ff;
+}
