@@ -39,11 +39,11 @@ const SideBar = () => {
             </Link>
           </div>
           <div className="flex flex-col justify-between h-screen w-full">
-            <div className="bg-[#F6F0FF] p-2 rounded-lg text-[#5208A5] flex items-center gap-3 px-5 mx-4">
+            <div className="bg-[#F6F0FF] p-2 rounded-lg text-[#5208A5] flex items-center gap-3 px-5 mx-4 cursor-pointer">
               <VscDashboard className="text-3xl" />
               <span>Dashboard</span>
             </div>
-            <div className="w-full py-6 flex items-center border-t gap-3 px-5">
+            <div className="w-full py-6 flex items-center border-t gap-3 px-5 cursor-pointer">
               <IoSettingsOutline className="text-[#667085] text-3xl font-medium" />
               <span>Settings</span>
             </div>

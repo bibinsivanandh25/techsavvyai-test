@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { FiUser } from 'react-icons/fi';
 import { MdLogout, MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { authService } from '../services';
@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 const UserModel = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  // const dropdownRef = useRef(null);
 
   const handleLogout = () => {
     authService.logout();
@@ -15,23 +14,6 @@ const UserModel = () => {
   };
 
   const { fullName } = JSON.parse(localStorage.getItem('userIdentity'));
-
-  // // Close dropdown if user clicks outside of it
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-  //       setIsOpen(false);
-  //     }
-  //   };
-
-  //   // Listen for clicks on the document
-  //   document.addEventListener('mousedown', handleClickOutside);
-
-  //   // Clean up the event listener
-  //   return () => {
-  //     document.removeEventListener('mousedown', handleClickOutside);
-  //   };
-  // }, []);
 
   return (
     <div className="relative">
